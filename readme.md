@@ -66,6 +66,7 @@ I want a user to be able to:
 
 ![](./images/working%20preview.png)<br>
 
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
@@ -76,6 +77,7 @@ VS Code<br>
 JavaScript<br>
 HTML<br>
 Node.js<br>
+Inquirer<br>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -89,7 +91,10 @@ Below you'll be able to see screen shots of the deployed app. You can also view 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Here's a screen shot of what the app looks like when someone runs the command line to start the app.
+Here's a video tutorial on how to use the app:<br>
+<a href="https://drive.google.com/file/d/1KFLmiKclLi2kLYyg-wbyLG2W9rv_rXD3/view">View Tutorial</a><br><br>
+
+Here're screen shots of what the app looks like when someone runs the command line to start the app.
 
 ![](./images/readme_terminal.png)
 ![](./images/running%20node%20prompt.png)
