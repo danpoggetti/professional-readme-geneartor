@@ -64,10 +64,9 @@ I want a user to be able to:
 <li>When the user is finished, a file is automatically created in the dist folder for them to retrieve.</li>
 </ol>
 
-![](./assets/images/weather_dash.png)<br>
+![](./images/working%20preview.png)<br>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ### Built With
 
@@ -80,8 +79,6 @@ Node.js<br>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
@@ -89,14 +86,18 @@ Below you'll be able to see screen shots of the deployed app. You can also view 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 <!-- USAGE EXAMPLES -->
 ## Usage
 
 Here's a screen shot of what the app looks like when someone runs the command line to start the app.
 
-![](./assets/images/weather_dashboard_example.png)
-
+![](./images/readme_terminal.png)
+![](./images/running%20node%20prompt.png)
+![](./images/selecting%20languages.png)
+![](./images/selecting%20license.png)
+![](./images/project%20success%20display.png)
+![](./images/projected%20created%20in%20dist%20folder.png)
+![](./images/working%20preview.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
