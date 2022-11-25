@@ -17,6 +17,7 @@ function init() {}
 init();
 
 
+
 inquirer
 .prompt(
     [
@@ -34,6 +35,97 @@ inquirer
                 }
             }
         },
+
+        {
+            type: 'input',
+            message: 'Please enter a description for your project (Required)',
+            name: 'description',
+        },
+
+        {
+            type: 'checkbox',
+            name: 'language',
+            message: 'What did you build this project with? (Check all that apply)',
+            choices: ['JavaScript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node']
+          },
+
+    
+        {
+            type: 'confirm',
+            name: 'confirmInstallation',
+            message: 'Do you want to enter some installation instructions for people?',
+            default: false
+        },
+
+        {
+            type: 'input',
+            name: 'installation',
+            message: 'Please enter your project installation instructions',
+        },
+
+        {
+            type: 'input',
+            name: 'usage',
+            message: 'Tell people how you can use your app'
+        },
+
+        {
+            type: 'input',
+            name: 'roadmap',
+            message: 'Please enter some basic methods for how one can navigate your project'
+        },
+
+        {
+            type: 'confirm',
+            name: 'confirmContributing',
+            message: 'Do you want to tell people how to contribute to your project?',
+            default: false
+          },
+
+        {
+            type: 'input',
+            name: 'contributing',
+            message: 'Please enter your how you want people to contribute to your project',
+          },
+
+          {
+            type: 'confirm',
+            name: 'confirmLicenseType',
+            message: 'Do you want to add a license type?',
+            default: false
+          },
+
+          {
+            type: 'checkbox',
+            name: 'licenseType',
+            message: 'Please seelect a type of license for the app',
+            choices: ['Apache License 2.0', 'GNU General Public License v3.0', 'MIT License', 'BSD 2-Clause "Simplified License"', 'BSD 3-Clause "New" or "Revised" License', 'Boost Software License 1.0', 'Creative Commons Zero v1.0 Universal', 'Eclipse Public License 2.0', 'GNU Affero General Public License v3.0', 'GNU General Public License v2.0', 'GNU Lesser General Public License v2.1', 'Mozilla Public License 2.0', 'The Unlicense'],
+          },
+
+        {
+            type: 'input',
+            message: 'Please enter the username associated with your GitHub (Required)',
+            name: 'githubUsername',
+        },
+
+        {
+            type: 'input',
+            message: 'Please enter the email address associated with your GitHub account (Required)',
+            name: 'email',
+        },
+
+        {
+            type: 'confirm',
+            name: 'confirmAcknowledgements',
+            message: 'Do you have any sources to credit?',
+            default: false
+          },
+
+          {
+            type: 'input',
+            name: 'acknowledgements',
+            message: 'Please enter the sources or fellow GitHub users you wish to credit',
+          },
           
     ]
 )
