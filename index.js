@@ -234,3 +234,14 @@ inquirer
     ${acknowledgements}`;
     createNewFile(title, template);
 });
+
+// still have to write the function and file
+
+function createNewFile(fileName, data){
+    fs.writeFile(`./dist/${fileName.toLowerCase().split(' ').join('')}.md`, data, (err) => {
+        if (err) {
+            console.log('There was a problem, please try again.')
+        }
+        console.log('Congratulations, your readme.md file has been created!');
+    })
+}
