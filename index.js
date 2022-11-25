@@ -182,3 +182,55 @@ inquirer
           
     ]
 )
+
+
+// questions are done, so let's show a then statement for our readme outline
+
+.then (({
+
+    title,
+    description,
+    language,
+    installation,
+    usage,
+    roadmap,
+    contributing,
+    licenseType,
+    githubUsername,
+    email,
+    acknowledgements
+
+}) => {
+    // now that the readme questions and .then statement are done, let's create our template to be used
+    
+    const template = `
+# ${title}
+
+![GitHub profile](https://img.shields.io/badge/Github-${githubUsername}-brightgreen)
+
+    
+*[Description](#description)
+*[Usage](#usage)
+*[Acknowledgements](#acknowledgements)
+*[License](#license)
+# Description
+    ${description}
+# Language
+    ${language}
+# Installation
+    ${installation}
+## Usage
+    ${usage}
+### Roadmap
+    ${roadmap}
+## Contributing
+    ${contributing}
+## License
+    ${licenseType}
+# Contact
+* Github: ${githubUsername}
+* e-mail: ${email}
+## Acknowledgements
+    ${acknowledgements}`;
+    createNewFile(title, template);
+});
