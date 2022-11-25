@@ -18,6 +18,7 @@ init();
 
 
 
+
 inquirer
 .prompt(
     [
@@ -40,6 +41,14 @@ inquirer
             type: 'input',
             message: 'Please enter a description for your project (Required)',
             name: 'description',
+            validate: descriptionInput => {
+                if (descriptionInput) {
+                    return true;
+                } else {
+                    console.log('Please enter a project description!');
+                    return false;
+                }
+            }
         },
 
         {
@@ -61,6 +70,13 @@ inquirer
             type: 'input',
             name: 'installation',
             message: 'Please enter your project installation instructions',
+            when: ({ confirmInstallation }) => {
+                if (confirmInstallation) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
         },
 
         {
@@ -86,6 +102,13 @@ inquirer
             type: 'input',
             name: 'contributing',
             message: 'Please enter your how you want people to contribute to your project',
+            when: ({ confirmContributing }) => {
+                if (confirmContributing) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
           },
 
           {
@@ -100,18 +123,41 @@ inquirer
             name: 'licenseType',
             message: 'Please seelect a type of license for the app',
             choices: ['Apache License 2.0', 'GNU General Public License v3.0', 'MIT License', 'BSD 2-Clause "Simplified License"', 'BSD 3-Clause "New" or "Revised" License', 'Boost Software License 1.0', 'Creative Commons Zero v1.0 Universal', 'Eclipse Public License 2.0', 'GNU Affero General Public License v3.0', 'GNU General Public License v2.0', 'GNU Lesser General Public License v2.1', 'Mozilla Public License 2.0', 'The Unlicense'],
+            when: ({ confirmLicenseType }) => {
+                if (confirmLicenseType) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
           },
 
         {
             type: 'input',
             message: 'Please enter the username associated with your GitHub (Required)',
             name: 'githubUsername',
+            validate: githubUsername => {
+                if (githubUsername) {
+                    return true;
+                } else {
+                    console.log('Please enter your GitHub username!');
+                    return false;
+                }
+            }
         },
 
         {
             type: 'input',
             message: 'Please enter the email address associated with your GitHub account (Required)',
             name: 'email',
+            validate: emailInput => {
+                if (emailInput) {
+                    return true;
+                } else {
+                    console.log('Please enter the email associated with your GitHub account');
+                    return false;
+                }
+            }
         },
 
         {
@@ -125,6 +171,13 @@ inquirer
             type: 'input',
             name: 'acknowledgements',
             message: 'Please enter the sources or fellow GitHub users you wish to credit',
+            when: ({ confirmAcknowledgements }) => {
+                if (confirmAcknowledgements) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
           },
           
     ]
